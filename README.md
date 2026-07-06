@@ -67,3 +67,26 @@ uptodate . -b ./bin/app -e go || docker build -t app .
 uptodate . -b ./bin/app -e go,mod,sum || go build
 ```
 
+## Build-time Configuration
+
+`uptodate` can be customized at install/build time using build flags.
+
+This allows you to define default behaviors without changing runtime commands.
+
+### Example (Go build)
+
+```bash
+go build -ldflags "-X main.exts=go,mod,sum" -o uptodate
+```
+
+### Available Build Flags
+
+- exts
+  - Default file extensions used for filtering
+  - Comma-separated values (e.g. go,mod,sum)
+
+### Behavior
+
+- Build flags define default values at compile time
+- Runtime flags (--ext, --all) can override build-time configuration
+- If neither build-time nor runtime --ext is set, all files are included
