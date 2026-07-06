@@ -14,6 +14,7 @@ import (
 var (
 	binaryPath string
 	exts       string
+	all        bool
 
 	rootCMD = cobra.Command{
 		Use:   "uptodate <source-root>",
@@ -61,8 +62,7 @@ Exit code:
 					return nil
 				}
 
-				// extension filter (Option A 핵심)
-				if len(allowed) > 0 {
+				if !all && len(allowed) > 0 {
 					ext := filepath.Ext(file.Name())
 					if !allowed[ext] {
 						return nil
@@ -96,7 +96,9 @@ Exit code:
 func init() {
 	rootCMD.Flags().StringVarP(&binaryPath, "binary", "b", "", "Path to the binary to compare against")
 
-	rootCMD.Flags().StringVarP(&exts, "ext", "e", "go", "Comma-separated file extensions to include (e.g. go,mod,sum)")
+	rootCMD.Flags().StringVarP(&exts, "ext", "e", exts, "Comma-separated file extensions to include. If not set, all files are considered. (e.g. go,mod,sum)")
+
+	rootCMD.Flags().BoolVar(&all, "all", all, "Include all files (override ext filter)")
 
 	_ = rootCMD.MarkFlagRequired("binary")
 }
