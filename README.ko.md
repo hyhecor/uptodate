@@ -8,6 +8,12 @@
 uptodate . -b ./bin/app -e go,mod,sum || echo "build command here"
 ```
 
+## 설치
+
+```bash
+go install github.com/hyhecor/uptodate
+```
+
 ## 📖 사용법
 
 ### 기본 사용
