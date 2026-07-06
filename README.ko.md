@@ -1,5 +1,10 @@
 # uptodate
 
+`uptodate`는 소스 파일 변경 여부를 확인하여  
+대상 바이너리가 다시 빌드되어야 하는지 판단하는 CLI 도구입니다.
+
+Docker, CI, Makefile 환경에서 불필요한 빌드를 줄이기 위해 사용합니다.
+
 - 🇺🇸 English: [README.en.md](README.md)
  
 ## TL;DR
