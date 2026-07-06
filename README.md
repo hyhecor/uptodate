@@ -13,6 +13,12 @@ It helps reduce unnecessary builds in Docker, CI, and Makefile workflows.
 uptodate . -b ./bin/app -e go,mod,sum || echo "build command here"
 ```
 
+## Install
+
+```bash
+go install github.com/hyhecor/uptodate
+```
+
 ## 📖 Usage
 
 ### Basic
