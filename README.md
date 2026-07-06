@@ -6,7 +6,7 @@ based on changes in source files.
 It helps reduce unnecessary builds in Docker, CI, and Makefile workflows.
 
 - 🇰🇷 한국어: [README.ko.md](README.ko.md)  
-- 🇺🇸 English: [README.en.md](README.md)
+- 🇺🇸 English: [README.md](README.md)
 
 ## TL;DR
 
