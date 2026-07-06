@@ -79,6 +79,12 @@ This allows you to define default behaviors without changing runtime commands.
 go build -ldflags "-X main.exts=go,mod,sum" -o uptodate
 ```
 
+### Example (Go install)
+
+```
+go install -ldflags "-X main.exts=go,mod,sum" github.com/hyhecor/uptodate@latest
+```
+
 ### Available Build Flags
 
 - exts
