@@ -6,7 +6,7 @@
 Docker, CI, Makefile 환경에서 불필요한 빌드를 줄이기 위해 사용합니다.
 
 - 🇰🇷 한국어: [README.ko.md](README.ko.md)  
-- 🇺🇸 English: [README.en.md](README.md)
+- 🇺🇸 English: [README.md](README.md)
  
 ## TL;DR
 
