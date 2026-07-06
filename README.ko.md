@@ -1,6 +1,6 @@
 # uptodate
 
-- 🇺🇸 English: [README.en.md](README.en.md)
+- 🇺🇸 English: [README.en.md](README.md)
  
 ## TL;DR
 
