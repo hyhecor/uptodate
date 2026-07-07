@@ -12,6 +12,6 @@ FROM alpine:3.23
 
 RUN apk --no-cache add ca-certificates
 
-COPY --from=builder /src/uptodate /bin/uptodate
+COPY --from=builder /src/uptodate /usr/local/bin/uptodate
 
 ENTRYPOINT ["uptodate"]
