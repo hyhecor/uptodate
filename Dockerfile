@@ -6,9 +6,11 @@ COPY go.mod go.sum ./
 RUN go mod download
 
 COPY . .
-RUN go build -o uptodate .
+RUN go build -trimpath -ldflags="-s -w" -o uptodate .
 
 FROM alpine:3.23
+
+RUN apk --no-cache add ca-certificates
 
 COPY --from=builder /src/uptodate /bin/uptodate
 
